@@ -49,4 +49,7 @@ def train(filename):
                 # getting batch from dataset
                 batch_x, batch_y = mnist.train.next_batch(BATCH)
 
-               
+                # Executing the model
+                sess.run([train_op], feed_dict={x: batch_x, y_: batch_y})
+
+            
