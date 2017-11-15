@@ -7,3 +7,8 @@ BATCH = 100
 LEARNING_RATE = 0.01
 TRAINING_EPOCHS = 30
 
+
+#Creating Placeholders
+x = tf.placeholder(tf.float32, shape=[None, 784])
+y_ = tf.placeholder(tf.float32, shape=[None, 10])
+
