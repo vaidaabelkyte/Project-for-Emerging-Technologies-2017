@@ -16,5 +16,76 @@
     <h2>Result:</h2>
 </div>
 
+<script>
+var canvas = document.getElementById('canvas');
+var button = document.getElementById('sendButton');
+var res = document.getElementById('result');
+
+// describes being in paint mode
+var paint = false;
+
+//create context for drawing
+var ctx = canvas.getContext("2d");
+
+// this function draws squares 10x10 pixels on x,y coordinates
+function addClick(x, y) {
+var x1 = (Math.floor(x / 10) - 1) * 10
+var y1 = (Math.ceil(y / 10) - 1) * 10
+
+if (x1 < 0) {
+x1 = 0
+}
+
+if (y1 < 0) {
+y1 = 0
+}
+
+ctx.beginPath();
+ctx.rect(x1, y1, 10, 10, true);
+ctx.closePath();
+ctx.fill();
+}
+
+// getting pixel value from the canvas by x,y
+function getPixel(x, y) {
+var pixelData = ctx.getImageData(x, y, 1, 1).data;
+return pixelData[3];
+}
+
+// creates array of 784 length with all values of squares
+function toArray() {
+var arr = []
+for (var i = 0; i < 280; i += 10) {
+for (var j = 0; j < 280; j += 10) {
+arr.push(getPixel(i, j).toFixed(3) / 255.0); // converting from 0-255 to 0-1 values
+}
+}
+return JSON.stringify(arr);
+}
+
+// registering callbacks on canvas
+canvas.onmousedown = function(e){
+paint = true;
+addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+};
+
+canvas.onmousemove = function(e){
+if(paint){
+addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+}
+};
+
+canvas.onmouseup = function(e){
+paint = false;
+};
+
+canvas.onmouseleave = function(e){
+paint = false;
+};
+
+
+
+</script>
+
 </body>
 </html>
