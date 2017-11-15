@@ -57,7 +57,10 @@ def train(filename):
                 print("Accuracy: ", accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
                 print("Model Execution Complete")
 
-                
+                 # saving tensorflow model to file
+        oSaver = tf.train.Saver()
+        oSaver.save(sess, filename)
+
 
 if __name__ == '__main__':
     train('./model_data/model/')
