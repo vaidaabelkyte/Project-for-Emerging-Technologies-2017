@@ -24,7 +24,7 @@ y = tf.nn.softmax(test)
 
 
 def train(filename):
-    
+    mnist = input_data.read_data_sets("model_data/", one_hot=True) #Download the MNIS
 
     # Defining Cost Function
      #This is the cost function of the model – a cost function is a difference between the predicted value
@@ -51,5 +51,16 @@ def train(filename):
 
                 # Executing the model
                 sess.run([train_op], feed_dict={x: batch_x, y_: batch_y})
+                # Print accuracy of the model
+            if epoch % 2 == 0:
+                print("Epoch: ", epoch)
+                print("Accuracy: ", accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
+                print("Model Execution Complete")
 
-            
+                
+
+if __name__ == '__main__':
+    train('./model_data/model/')
+
+
+       
