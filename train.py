@@ -23,3 +23,10 @@ test = tf.matmul(x, W) + b
 y = tf.nn.softmax(test)
 
 
+def train(filename):
+    
+
+    # Defining Cost Function
+    cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
+
+   
