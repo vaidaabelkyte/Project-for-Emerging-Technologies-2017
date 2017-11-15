@@ -27,6 +27,12 @@ def train(filename):
     
 
     # Defining Cost Function
+     #This is the cost function of the model – a cost function is a difference between the predicted value
+    # and the actual value that we are trying to minimize to improve the accuracy of the model
     cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
+  
+    # Determining the accuracy of parameters
+    correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
    
