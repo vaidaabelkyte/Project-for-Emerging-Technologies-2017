@@ -42,4 +42,11 @@ def train(filename):
     with tf.Session() as sess:
         sess.run(tf.initialize_all_variables())
 
-       
+        # Creating batches of data for epochs
+        for epoch in range(TRAINING_EPOCHS):
+            batch_count = int(mnist.train.num_examples / BATCH)
+            for i in range(batch_count):
+                # getting batch from dataset
+                batch_x, batch_y = mnist.train.next_batch(BATCH)
+
+               
