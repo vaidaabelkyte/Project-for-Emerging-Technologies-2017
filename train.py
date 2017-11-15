@@ -38,4 +38,8 @@ def train(filename):
     # Implementing Gradient Descent Algorithm
     train_op = tf.train.GradientDescentOptimizer(LEARNING_RATE).minimize(cross_entropy)
 
-   
+    # Initializing the session
+    with tf.Session() as sess:
+        sess.run(tf.initialize_all_variables())
+
+       
