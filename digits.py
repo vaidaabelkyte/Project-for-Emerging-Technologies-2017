@@ -55,3 +55,9 @@ def digit():
 if __name__ == '__main__':
     session = check_model()
     app.run()
+
+
+    #some of the links where i looked for code
+    #https://www.tensorflow.org/programmers_guide/saved_model
+    #https://stackoverflow.com/questions/45270298/vectorize-reshape-and-normalise-my-image-to-image-like-mnist-train-images
+    #https://stackoverflow.com/questions/37898795/tensorflow-accuracy-at-99-but-predictions-awful
