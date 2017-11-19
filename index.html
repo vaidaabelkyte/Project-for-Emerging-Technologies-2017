@@ -13,7 +13,7 @@
     <button id="sendButton">Submit</button>
 </div>
 <div>
-    <h2>Result:</h2>
+    <h2>Result: <span id="result"></span> </h2>
 </div>
 
 <script>
@@ -83,6 +83,21 @@ canvas.onmouseleave = function(e){
 paint = false;
 };
 
+// button click function
+button.onclick = function() {
+var img = toArray(); // getting data from canvas
+var xhttp = new XMLHttpRequest(); // init ajax request
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) { // if response is ok sets response text to result label
+
+}
+};
+xhttp.open("POST", "/digit", true); // setting url and method to call
+xhttp.setRequestHeader("Content-type", "application/json"); // specifying content type as json to make deserialization easier
+xhttp.send(img); // sending request with image data in the body
+};
+
+//button click function and POST request creted using a tutorial from w3schoold called "The onreadystatechange Property"
 
 
 </script>
