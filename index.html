@@ -89,7 +89,7 @@ var img = toArray(); // getting data from canvas
 var xhttp = new XMLHttpRequest(); // init ajax request
 xhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) { // if response is ok sets response text to result label
-
+result.innerHTML = this.responseText;
 }
 };
 xhttp.open("POST", "/digit", true); // setting url and method to call
