@@ -37,5 +37,11 @@ $ python digits.py   -----> to star the app.
 ![digit](https://user-images.githubusercontent.com/15648433/33519729-e14cf5f8-d7a4-11e7-9936-7f1b75597ce2.png)
 
 
+<br>
+<h5>References</h5>
+<h6>
+To accomplish the task I was following the  <a href="https://www.tensorflow.org/get_started/mnist/beginners">MNIST For ML Beginners tutorial by TensorFlow</a>  <br>
+And also I've used an article -  <a href="http://dataaspirant.com/2017/05/03/handwritten-digits-recognition-tensorflow-python/"> "Handwritten digits recognition using google tensorflow with python" </a> written by data scientist  <a href="http://dataaspirant.com/about/"> Saimadhu Polamuri</a>, to come up with learning process and evaluate correctness of the model.
 
+</h6>
 
