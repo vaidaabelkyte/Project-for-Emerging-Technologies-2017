@@ -9,7 +9,7 @@ Year - 4</h4>
 <h3><i>Project Overview</h3>
 <p>
 In this project I have created a web application in Python to recognise digits in images. User can visit the web 
-application through their browser (instructions below - How to run the application). User can draw an image containing a single digit 
+application through their browser (instructions below - How to run the application).<br> User can draw an image containing a single digit 
 in the canvas, and the web application will respond with the digit contained in the image. 
 I used tensorflow and flask to do the project.
 </p>
@@ -31,4 +31,11 @@ $ python train.py   ---->   to Download the <a href="http://yann.lecun.com/exdb/
 $ python digits.py   -----> to star the app.
 
 </p>
+
+<h3><i>Screenshot of the application</h3>
+
+![digit](https://user-images.githubusercontent.com/15648433/33519729-e14cf5f8-d7a4-11e7-9936-7f1b75597ce2.png)
+
+
+
 
