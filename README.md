@@ -14,7 +14,7 @@ in the canvas, and the web application will respond with the digit contained in 
 I used tensorflow and flask to do the project.
 </p>
 
-<h3><i>Technologies</3>
+<h3><i>Technologies</h3>
 <p>
 - <a href="http://flask.pocoo.org/">Flask microframework for Python</a><br>
   - <a href="https://www.python.org/">Python programming language</a><br>
@@ -22,7 +22,7 @@ I used tensorflow and flask to do the project.
       - <a href="https://getbootstrap.com/">Bootstrap - front-end component library</a><br>
 </p>
 
-<h3><i>How to run the application</3>
+<h3><i>How to run the application</h3>
 <p>
 The app can be run locally :<br>
 $ python digits.py<br>
